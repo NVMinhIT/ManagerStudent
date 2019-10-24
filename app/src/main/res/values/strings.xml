@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ManagerStudent_MVVM</string>
+    <string name="danhsach">Danh sách sinh viên</string>
+    <string name="hoten">Họ tên</string>
+    <string name="ngaysinh">Ngày Sinh</string>
+    <string name="gioitinh">Giới tính</string>
+    <string name="diachi">Địa chỉ</string>
+    <string name="chuyennganh">Chuyên ngành</string>
+    <string name="tensinhvien">Nhập tên sinh viên</string>
+    <string name="themngaysinh">Chọn ngày sinh</string>
+    <string name="nam">Nam</string>
+    <string name="nu">Nữ</string>
+    <string name="timkiem">Tìm kiếm</string>
+    <string name="updatesinhvien">Update Student</string>
+    <string name="hotenstudent">Name: </string>
+    <string name="ngaysinhstudent">Date:</string>
+    <string name="gioitinhstudent">Sex: </string>
+    <string name="capnhat">Update Student</string>
+    <string name="luu">Save</string>
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.main.ListStudentActivity">
+
+        <LinearLayout
+            android:id="@+id/content_search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#0097A7"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_edit_search"
+                android:hint="@string/timkiem"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:singleLine="true"
+                android:textColorHint="#BDBDBD"
+                tools:ignore="Autofill,RtlSymmetry,UnusedAttribute" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Sorted by:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_search"
+            android:layout_marginLeft="16dp" />
+
+        <Spinner
+            android:id="@+id/spinner_sort_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_sort"
+            app:layout_constraintStart_toEndOf="@+id/txt_sort"
+            app:layout_constraintTop_toTopOf="@+id/txt_sort"
+            android:layout_marginLeft="8dp" />
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:background="#0097A7"
+            android:gravity="center"
+            android:text="@string/danhsach"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list_student"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sort"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:backgroundTint="#0097A7"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:targetApi="lollipop" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.managerstudent_mvvm.view.main.StudentViewModel" />
+
+    </data>
+</layout>
